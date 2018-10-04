@@ -1,5 +1,4 @@
+#!/usr/bin/php
 <?php
-	$output = preg_replace('(\s\s+|\t|\r)', ' ', $argv[1]);
-	$output = trim($output);
-	echo $output;
+	echo trim(preg_replace('(\s\s+|\t)', ' ', $argv[1]))."\n";
 ?>
