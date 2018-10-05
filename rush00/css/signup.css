@@ -1,0 +1,20 @@
+body
+{
+	background-color: whitesmoke;
+}
+.cpright
+{
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	font-style: italic;
+	float: right;
+}
+.links
+{
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	font-size: 20px;
+	float: left;
+	color: black;
+	text-decoration: none;
+}
