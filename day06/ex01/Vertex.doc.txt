@@ -1,3 +1,7 @@
 <- Vertex ----------------------------------------------------------------------
-This Vertex class handle vertexs
+The Vertex class handles x,y,z corrdinates.
+An instance can be contructed from x, y ,z coordinates.
+new Vertex(array(new Vertex(array( 'x' => 12, 'y' => 32, 'z'=> 120 ))));
+X,Y,Z and W coordinates are retireved or set by
+public function getX(),getY etc.
 ---------------------------------------------------------------------- Vertex ->

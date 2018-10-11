@@ -1,3 +1,24 @@
 <- Vector ----------------------------------------------------------------------
-Your documentation here.
+The Vector class handles x,y,zcorrdinates.
+An instance can be contructed from either a pair of Vertices(origin, destination).
+new Vector(array(new Vertex(array( 'x' => 12, 'y' => 32, 'z'=> 120 ))));
+The class provides the following methods :
+float   magnitude();
+calculates magnitude of a vector.
+Vector   normalize();
+Normalizes a vector if neccessary.
+Vector   add(Vector $ret);
+adds two vectors and returns result vector.
+Vector   sub(Vector $ret);
+subtraction of two vectors and returns result vector.
+Vector   opposite();
+returns the opposite of a vector.
+Vector   scalarProduct($k);
+Multiplies each coordinate by parameter and returns vector.
+float   dotProduct(Vector $ret);
+Multiplies two vectors.
+float   cos(Vector $ret);
+calcates angle between two vectors
+Vector   crossProduct(Vector $ret);
+calculates the cross product of to vectors.
 ---------------------------------------------------------------------- Vector ->
