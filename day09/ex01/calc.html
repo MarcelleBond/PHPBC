@@ -12,56 +12,36 @@
 			var left = parseInt(document.getElementById('left').value);
 			var sign = document.getElementById('sign').value;
 			var right = parseInt(document.getElementById("right").value);
-			
+			var res;
 			if (left >= 0 && right >= 0) {
-				switch (sign) {
-					case "+":
-					{
-						alert(left + right);
-						console.log(left + right);
-						break;
-					}
-					case "-":
-					{	
-						alert(left - right);
-						console.log(left - right);
-						break;
-					}
-					case "*":
-					{	alert(left * right);
-						console.log(left * right);
-						break;
-					}
-					case "/":
-					{
-						if (right == 0) {
-							alert("It’s over 9000!");
-							console.log("It’s over 9000!");
-							break;
-						}
-						alert(left / right);
-						console.log(left / right);
-						break;
-					}
-					case "%":
-					{
-						if (right == 0) {
-							alert("It’s over 9000!");
-							console.log("It’s over 9000!");
-							break;
-						}
-						alert(left % right);
-						console.log(left % right);
-						break;
-					}
-					default:
-						break;
+				if (sign == '+')
+					res = left + right;
+				else if (sign == '-')
+					res = left - right;
+				else if (sign == '*')
+					res = left * right;
+				else if (sign == '/')
+				{
+					if (right == 0)
+						res = "It’s over 9000!";
+					else
+						res = left / right;
 				}
+				else if (sign == '%')
+				{
+					if (right == 0)
+						res = "It’s over 9000!";
+					else
+						res = left % right;
+				}
+				alert(res);
+				console.log(res);
 			} else {
 				alert("Error :(");
 				console.log("Error :(");
 			}
 		}
+		window.setInterval(function(){ alert("Please, use me..."); }, 30000);
 	</script>
 <body>
 	<form action="#">
