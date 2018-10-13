@@ -4,10 +4,10 @@
 	<title>Calc</title>
 </head>
 	<script>
- 		/* window.onload = function () {
+ 		 window.onload = function () {
 			calc = document.getElementById("button");
-			calc.createEventListener('submit');
-		}  */
+			calc.addEventListener('click',doop);
+		}  
 		function doop() {
 			var left = parseInt(document.getElementById('left').value);
 			var sign = document.getElementById('sign').value;
@@ -54,7 +54,7 @@
 			<option value="%">%</option>
 		</select>
 		<input type="text" id="right">
-		<input type="submit" value="Try me" id="button" onclick="doop()">
+		<input type="submit" value="Try me" id="button">
 	</form>
 </body>
 </html>
