@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Balloon</title>
+	<script>
+		function grow(params) {
+			var balloon = document.getElementById("balloon");
+			balloon.style.width = balloon.offsetWidth + 10 + "px";
+			balloon.style.height = balloon.offsetHeight + 10 + "px";
+			if (balloon.style.background == "red") {
+				balloon.style.background = 'green';
+			} 
+			else if (balloon.style.background == "green") {
+				balloon.style.background = "blue";
+			}
+			else if (balloon.style.background == 'blue') {
+				balloon.style.background = "red";
+			}
+			if (balloon.style.height > "420px") {
+				balloon.style.height = '200px';
+				balloon.style.width = '200px';
+				balloon.style.background = "red";
+			}
+		}
+
+		function shrink() {
+			var balloon = document.getElementById("balloon");
+			if (balloon.style.height > "200px") {
+				balloon.style.height = balloon.offsetHeight - 5 + 'px';
+				balloon.style.width = balloon.offsetWidth - 5 + 'px';
+			}
+			if (balloon.style.background == 'red') {
+				balloon.style.background = 'blue';	
+			} 
+			else if (balloon.style.background == 'blue') {
+				balloon.style.background = 'green';
+			}
+			else if (balloon.style.background == 'green') {
+				balloon.style.background = 'red';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="balloon" style="background:red; border-radius: 100%; width: 200px; height: 200px;" onclick="grow()" onmouseout="shrink()"></div>	
+</body>
+</html>
