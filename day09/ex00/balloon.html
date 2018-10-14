@@ -2,6 +2,15 @@
 <html>
 <head>
 	<title>Balloon</title>
+	<style>
+		.balloon
+		{
+			background:red; 
+			border-radius: 100%; 
+			width: 200px; 
+			height: 200px;
+		}
+	</style>
 	<script>
 		function grow(params) {
 			var balloon = document.getElementById("balloon");
@@ -16,6 +25,8 @@
 			else if (balloon.style.background == 'blue') {
 				balloon.style.background = "red";
 			}
+			else
+				balloon.style.background = 'green';
 			if (balloon.style.height > "420px") {
 				balloon.style.height = '200px';
 				balloon.style.width = '200px';
@@ -38,10 +49,12 @@
 			else if (balloon.style.background == 'green') {
 				balloon.style.background = 'red';
 			}
+			else
+				balloon.style.background = 'blue';
 		}
 	</script>
 </head>
 <body>
-	<div id="balloon" style="background:red; border-radius: 100%; width: 200px; height: 200px;" onclick="grow()" onmouseout="shrink()"></div>	
+	<div id="balloon" class="balloon" onclick="grow()" onmouseout="shrink()"></div>	
 </body>
 </html>

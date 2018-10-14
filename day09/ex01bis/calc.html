@@ -3,18 +3,21 @@
 <head>
 	<title>Calc</title>
 </head>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 	<script>
- 		 window.onload = function () {
-			calc = document.getElementById("button");
-			calc.addEventListener('click',doop, false);
-		}  
-		function doop() {
-			var left = parseInt(document.getElementById('left').value);
-			var sign = document.getElementById('sign').value;
-			var right = parseInt(document.getElementById("right").value);
-			var res;
+		$(document).ready(function()
+		{
+			$("#button").click(function()
+			{
+				var left = parseInt($("#left").val());
+				var right = parseInt($("#right").val());
+				var sign = $("#sign").val();
+				var res;
 			if (left >= 0 && right >= 0) {
-				if (sign == '+')
+				if (sign === '+')
 					res = left + right;
 				else if (sign == '-')
 					res = left - right;
@@ -40,7 +43,8 @@
 				alert("Error :(");
 				console.log("Error :(");
 			}
-		}
+			})
+		});
 		setInterval(function(){ alert("Please, use me..."); }, 30000);
 	</script>
 <body>
